@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_wuxing_title"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="[天才]"
+        android:textColor="@color/zonghe_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_sc_wuxing"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/low_score_color"
+        android:gravity="center"
+        android:text="木"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

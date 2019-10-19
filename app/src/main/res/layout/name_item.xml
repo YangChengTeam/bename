@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/layout_name_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_input_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/name_word_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.ydys.qmb.ui.custom.DividerView
+                android:layout_width="1dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="12dp"
+                android:layerType="software"
+                custom:dashGap="3dp"
+                custom:dashLength="1dp"
+                custom:dashThickness="1dp"
+                custom:divider_line_color="@color/line2_color"
+                custom:divider_orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="综合评分"
+                    android:textColor="@color/zonghe_color" />
+
+                <TextView
+                    android:id="@+id/tv_name_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/high_score_color"
+                    android:textSize="28sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/name_explain_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:background="@drawable/look_bg"
+                android:text="查看"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_add_keep"
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="38dp"
+                android:background="@drawable/is_not_collection_bg"
+                android:text="收藏"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="10dp"
+            app:realtimeOverlayColor="#0Db2b2b2" />
+    </LinearLayout>
+</FrameLayout>

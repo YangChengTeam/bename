@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center">
+
+        <View
+            android:id="@+id/left_point"
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:background="@color/zonghe_color" />
+
+        <TextView
+            android:id="@+id/tv_wg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/left_point"
+            android:gravity="center"
+            android:text="综合"
+            android:textColor="@color/zonghe_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_wg_value"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tv_wg_title"
+            android:background="@color/round_color"
+            android:gravity="center"
+            android:text="23"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_wg_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tv_wg_value"
+            android:gravity="center"
+            android:text="[主掌晚年运势]"
+            android:textColor="@color/tab_tv_normal"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_wuxing"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/tv_jx"
+            android:background="@color/tab_select_color"
+            android:gravity="center"
+            android:text="火"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_jx"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/mobile_login_color"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="大吉"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="left|center">
+
+        <TextView
+            android:id="@+id/tv_wg_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:gravity="left|center"
+            android:padding="4dp"
+            android:text="（旭日升天）旭日升天，鸾凤相会，名闻天下，隆昌至极。女性不宜此数。"
+            android:textColor="@color/black3"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

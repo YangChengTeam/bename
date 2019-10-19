@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_base_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/zonghe_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_ft_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/gray_666"
+            android:text="張"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pingyin"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="zhang"
+            android:textColor="@color/gray_666"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_bihua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="11"
+            android:textColor="@color/gray_666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_wuxing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="火"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/gray_666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_jixiong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="吉"
+            android:gravity="center"
+            android:textColor="@color/gray_666"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

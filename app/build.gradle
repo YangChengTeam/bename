@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ydys.qmb"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+        renderscriptTargetApi 28
+        renderscriptSupportModeEnabled true    // Enable RS support
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('bename.jks')
+            storePassword "123456"
+            keyAlias "bename"
+            keyPassword "123456"
+        }
+    }
+}
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "2c79dffcf873e"
+    appSecret "91ecaffbf8ef416918e47db555f551a7"
+    SMSSDK {}
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
+    implementation 'com.android.support:cardview-v7:28.+'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.support:support-v4:28.+'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
+    implementation 'com.google.android.material:material:1.1.0-alpha05'
+    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx'
+    //rxjava
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'io.reactivex:rxjava:1.1.0'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //logger
+    implementation 'com.orhanobut:logger:1.15'
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.blankj:utilcode:1.23.7'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.alibaba:fastjson:1.1.70.android'
+    implementation 'com.shuyu:GSYVideoPlayer:6.0.1'
+
+    implementation 'com.youth.banner:banner:1.4.10'
+    //implementation 'com.github.SherlockGougou:BigImageViewPager:v4_2.1.4'
+    implementation 'com.github.iielse:ImageWatcher:1.1.5'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.jude:easyrecyclerview:4.4.2'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'me.codeboy.android:align-text-view:2.3.1'
+    implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.1'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.2.0'
+    implementation 'com.zhihu.android:matisse:0.5.2-beta4'
+    implementation 'com.github.ome450901:SimpleRatingBar:1.4.2'
+    implementation 'cn.yc:YCStatusBarLib:1.4.0'
+    implementation 'lib.kingja.switchbutton:switchbutton:1.1.8'
+    implementation 'com.just.agentweb:agentweb:4.0.2'
+    implementation 'org.jsoup:jsoup:1.10.2'
+    implementation 'com.github.GrenderG:Toasty:1.4.1'
+    implementation 'com.liulishuo.filedownloader:library:1.7.6'
+    implementation 'me.yuqirong:cardswipelayout:1.0.0'
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0_preview'
+    implementation 'com.jakewharton.rxbinding:rxbinding:+'
+    implementation 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:+'
+    implementation 'com.jakewharton.rxbinding:rxbinding-design:+'
+    implementation 'com.github.anzaizai:EasyRefreshLayout:1.3.1'
+    implementation 'com.lcodecorex:extextview:1.0.2'
+    //implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+    implementation 'com.wx.wheelview:wheelview:1.3.3'
+
+    implementation files('libs/open_sdk_r5756.jar')
+    implementation files('libs/umeng-analytics-7.5.4.jar')
+    implementation files('libs/umeng-common-1.5.4.jar')
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-full-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
+    implementation files('libs/mid-sdk-4.06.jar')
+    implementation files('libs/mta-android-sdk-3.4.7.jar')
+
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'ckrjfrog.FlexItemDecoration:Decoration:1.1.3'
+    //图表控件
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.just.agentweb:agentweb:4.1.2'
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    implementation (name: 'alipaySdk-15.6.5-20190718211148', ext: 'aar')
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.18'
+
+    implementation "org.permissionsdispatcher:permissionsdispatcher:4.5.0"
+    annotationProcessor "org.permissionsdispatcher:permissionsdispatcher-processor:4.5.0"
+}

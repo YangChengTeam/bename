@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_mean"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_xingmingxue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="2"
+        android:padding="2dp"
+        android:text="张：性刚口快，克父命，中年潦倒或奔波，晚年吉祥。"
+        android:textColor="@color/zonghe_color"
+        android:textSize="13sp" />
+</LinearLayout>

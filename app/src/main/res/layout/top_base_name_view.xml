@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:background="@mipmap/base_info_bg"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_surname_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="姓氏："
+                android:textColor="@color/tab_tv_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_surname_txt"
+                android:text="张"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sex_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/tv_surname"
+                android:text="性别："
+                android:textColor="@color/tab_tv_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_sex_txt"
+                android:text="男"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/base_edit_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_sx_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="生肖："
+                android:textColor="@color/tab_tv_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_sx_txt"
+                android:text="龙"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_star_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/tv_sx"
+                android:text="星座："
+                android:textColor="@color/tab_tv_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_star_txt"
+                android:text="天秤座"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_gongli_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="公历生日："
+                android:textColor="@color/tab_tv_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_gongli_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_gongli_txt"
+                android:text="2019-02-16 12:23"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_nongli_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="农历生日："
+                android:textColor="@color/tab_tv_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_nongli_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_nongli_txt"
+                android:text="己亥年二月初九丑时"
+                android:textColor="@color/zonghe_color"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_duplicate_base_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="16dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:text="省份分布图"
+                    android:textColor="@color/base_info_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.ydys.qmb.ui.custom.ChinaMapView
+                    android:id="@+id/china_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/map_bg_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_age_info"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:text="年龄分布图"
+                        android:textColor="@color/base_info_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/age_line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_xingzuo_info"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:text="星座分布图"
+                        android:textColor="@color/base_info_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/xingzuo_line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!--生肖-->
+            <LinearLayout
+                android:id="@+id/layout_shengxiao_info"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:text="生肖分布图"
+                        android:textColor="@color/base_info_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/shengxiao_line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chongming_no_data" />
+
+            <TextView
+                android:id="@+id/tv_chongming_no_data"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="暂无数据"
+                android:textColor="@color/gray_aaa"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

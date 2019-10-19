@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top|center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_pingyin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="zhang"
+            android:textColor="@color/zonghe_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="张"
+            android:textColor="@color/zonghe_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_wuxing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="[土]"
+            android:textColor="@color/wuxing_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

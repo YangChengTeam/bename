@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#337fff</color>
+    <color name="colorPrimaryDark">#337fff</color>
+    <color name="colorAccent">#337fff</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="bg_color">#f2f2f2</color>
+
+    <color name="tab_tv_normal">#999999</color>
+    <color name="tab_tv_selected">#333333</color>
+
+    <color name="black">#000000</color>
+    <color name="black1">#333333</color>
+    <color name="black3">#555555</color>
+
+    <color name="gray_666">#666666</color>
+    <color name="gray_aaa">#aaaaaa</color>
+
+    <color name="color_yellow">#f94758</color>
+    <color name="color_blue">#f94758</color>
+    <color name="color_zi">#fef5c5</color>
+
+    <color name="input_bg">#f2f2f2</color>
+
+    <color name="color_diy">#fe8119</color>
+
+    <color name="line_color">#f2f2f2</color>
+
+    <color name="down_bg_color">#f2a227</color>
+
+    <color name="common_txt_color">#373a40</color>
+
+    <color name="line1_color">#eef0f4</color>
+
+    <color name="line2_color">#c1c1c1</color>
+
+    <color name="common_btn_selected">#3289ff</color>
+
+    <color name="gray_normal">#b8bec6</color>
+
+    <color name="zonghe_color">#282a2d</color>
+
+    <color name="high_score_color">#f11d1d</color>
+
+    <color name="low_score_color">#179d4a</color>
+
+    <color name="wuxing_color">#b0b0b0</color>
+
+    <color name="look_border_color">#d8d8d8</color>
+
+    <color name="pay_txt_color">#666666</color>
+
+    <color name="price_color">#fc2a2a</color>
+
+    <color name="wx_pay_color">#13bb56</color>
+
+    <color name="alipay_pay_color">#00a0e9</color>
+
+    <color name="tab_normal_color">#666666</color>
+
+    <color name="tab_select_color">#fb5161</color>
+
+    <color name="tab_unselect_color">#bbd1ff</color>
+
+    <color name="base_title_color">#e1e2e7</color>
+
+    <color name="base_info_color">#222326</color>
+
+    <color name="base_item_color">#f8f8fa</color>
+
+    <color name="base_item_double_color">#ebebee</color>
+
+    <color name="peotry_color">#a29970</color>
+
+    <color name="round_color">#bf9d00</color>
+
+    <color name="map_bg_color">#f7f7f7</color>
+
+    <color name="line3_color">#dcdcdc</color>
+
+    <color name="user_id_color">#acc8ff</color>
+
+    <color name="order_item_color">#373a40</color>
+
+    <color name="wx_login_color">#33cc33</color>
+
+    <color name="qq_login_color">#3d99ff</color>
+
+    <color name="mobile_login_color">#fe921f</color>
+
+    <color name="progress_bg_color">#e6e8ef</color>
+
+    <color name="bing_colo1_1">#aa11f3</color>
+    <color name="bing_colo1_2">#ff11f3</color>
+    <color name="bing_colo1_3">#dfff3f</color>
+    <color name="bing_colo1_4">#00BFFF</color>
+
+    <color name="load_name_color">#047ffb</color>
+
+    <color name="xys_color">#b80002</color>
+
+    <color name="transparent_gray">#90000000</color>
+
+    <color name="male_color">#6ea7e2</color>
+    <color name="female_color">#ff7d7d</color>
+
+    <color name="waige_color">#7b6a55</color>
+    <color name="dige_color">#bf9d00</color>
+    <color name="renge_color">#01527d</color>
+    <color name="zongge_color">#9e241b</color>
+
+    <color name="delete_config_color">#f64a33</color>
+
+    <color name="jin_color">#bf9d00</color>
+    <color name="mu_color">#007737</color>
+    <color name="shui_color">#005480</color>
+    <color name="huo_color">#9d241a</color>
+    <color name="tu_color">#7b6b55</color>
+</resources>

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">起名取名宝</string>
+
+    <string name="tab_home_txt">取名</string>
+    <string name="tab_category_txt">解名</string>
+    <string name="tab_gif_txt">测试</string>
+    <string name="tab_photo_txt">秀场</string>
+    <string name="tab_fun_txt">趣图</string>
+    <string name="tab_my_txt">我的</string>
+    <string name="tab_find_txt">发现</string>
+    <string name="button_allow">开启</string>
+    <string name="button_deny">拒绝</string>
+
+    <string name="permission_storage_never_ask_again">不再询问</string>
+    <string name="permission_read_phone_rationale">请开启获取手机识别码权限</string>
+    <string name="permission_storage_rationale">请开启读写手机存储卡权限</string>
+    <string name="permission_storage_denied">禁止了权限，开启权限才能正常使用</string>
+
+    <string name="copy_right">本APP素材采集于网络，如因资源版权或者其他问题可以邮件联系删除或者合作</string>
+
+    <string name="name_base_info">姓名详解</string>
+    <string name="name_scdg">诗词典故</string>
+    <string name="name_wxbz">五行八字</string>
+    <string name="name_scwg">三才五格</string>
+    <string name="name_lxqs">流行趋势</string>
+    <string name="name_ylyd">音律音调</string>
+    <string name="name_cmcx">重名查询</string>
+
+    <string name="sc_value">
+        《总论》 事业或计划之事都可达成,身为职员或公务员,也能平步青云,步步高升,内外平顺圆满,家运昌隆,财运不缺。但须提防他人之嫉妒及小人之拖累招来无谓风波或损失,多在奋斗中得到稳定性的小成功。\n
+        《性格》 为人忠厚正直,做事稳健可靠,有计划的头脑,敢作敢当,大致表面温和内性刚强,主观意识过重,容易独断独行,易受到他人的不满与中伤,这点需要改进。\n
+        《意志》 意志尚称坚定,不断在追求理想,也有耐性,能克苦耐劳,得到正比的报酬。\n
+        《事业》 在稳定中得发展,一生运途平顺,可以一展自已的抱负。不适投机性事业。\n
+        《家庭》 圆满幸福,夫妻相敬如宾,任何事情有合理的洽商。\n
+        《婚姻》 男娶有才干之妻,喜欢掌理家中之一切事务。女嫁谦恭之夫,善于安排愉快气氛,使家庭和谐。\n
+        《子女》 聪明又孝顺,容易在社会上出人头地,光大门楣。\n
+        《社交》 能受到别人的尊重与欢迎,不论是薪水阶级或自营事业,都能得到提拔与照顾。\n
+        《精神》 平日劳心于工作上的计划,但精神上都能得到安慰,保持原则不好高骛远,可永保无忧。\n
+        《财运》 可依劳力的程度得到相当的财利,物质生活尚佳。属辛勤中得财之运。\n
+        《健康》 容易精神疲劳,筋骨酸痛或胃肠之少许毛病。\n
+        《老运》 为名为利,中年前辛勤,老境安然自在,晚年可享清福。\n
+    </string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="rationale_camera">This app needs access to your camera so you can take pictures.</string>
+    <string name="rationale_location_contacts">This app needs access to your location and contacts to know where and who you are.</string>
+    <string name="rationale_sms">This app needs access to your sms to read all your great messages.</string>
+    <string name="returned_from_app_settings_to_activity">
+        Returned from app settings to MainActivity with the following permissions:
+        \n\nCamera: %s
+        \nLocation &amp; Contacts: %s
+        \nSMS: %s
+    </string>
+    <string name="camera">Camera</string>
+    <string name="location_and_contacts">Location and Contacts</string>
+    <string name="sms">SMS</string>
+
+    <string name="read_phone_per">需要读取手机识别码权限，为你提供更好的服务</string>
+
+    <string name="read_storage_per">需要读写文件的权限，才能继续使用</string>
+
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
+    <string name="jin_zhu">[金主自制力、毅力、决断力]</string>
+    <string name="mu_zhu">[木主生发之气、情感、艺术]</string>
+    <string name="shui_zhu">[水主思考、洞察、判断力、反应力]</string>
+    <string name="huo_zhu">[火主活力、激情、表现力]</string>
+    <string name="tu_zhu">[土主兼容并蓄、宽恕力、感恩]</string>
+
+    <string name="jin_desc">金力充沛时，适宜决断、突破、开拓、坚持、告白、分手、探险。金力过旺时，容易尖酸、苛刻、暴力。</string>
+    <string name="mu_desc">木力充沛时，适宜恋爱、社交、公益、文艺创作、运动健身。木力过旺时，容易抑郁、偏执、发怒。</string>
+    <string name="shui_desc">水力充沛时，适宜投资、谈判、分析、策划、读书、静思。 水力过旺时，容易算计、过虑、悲观。</string>
+    <string name="huo_desc">火力充沛时，适宜积极开展行动、组织活动、旅行、聚会、演讲、表演、公关。 火力过旺时，容易急躁、冲动、逞强。</string>
+    <string name="tu_desc">土力充沛时，适宜统筹、协调、开启合作、开放、缓和矛盾、拜谢前辈领导。 土力过旺时，容易顽固、不理智、盲从。</string>
+
+    <string name="dash">-</string>
+
+    <string name="xys_desc">    老师提醒：用神和喜神是你一生中最需要，对你说明最多的五行。寿命之长短，福运之薄厚，财富的多与少，运气的好运怀都与用神和喜神息息相关。故无论是谁都需要帮补自己的用神和喜神。@@
+    A1“同类”比“异类”数值小 ，日主 身弱 ， 应以金、水为平衡用神。A2经过对命局中五行力量及季节力量的综合分析，本着抑强扶弱、化敌为友、平衡命局的原则，同时考虑到特殊格局，本命局取##为喜用五行，起名时建议带五行属性为##的汉字。
+※平衡用神中数值最少的五行就是「喜用神」或称「有用之神」※
+$喜用神分析根据数十万实例证明，具有极高的准确性！特殊命例应以具体专业老师最终分析为准！%%</string>
+</resources>

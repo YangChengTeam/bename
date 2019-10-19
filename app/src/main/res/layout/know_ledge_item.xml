@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:background="@color/round_color" />
+
+        <TextView
+            android:id="@+id/tv_wuxing"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:textColor="@color/round_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_wuxing_zhu"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:textColor="@color/tab_tv_normal"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center">
+
+        <TextView
+            android:id="@+id/tv_wuxing_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/black3"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>
