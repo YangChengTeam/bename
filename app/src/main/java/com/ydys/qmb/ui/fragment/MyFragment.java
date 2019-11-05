@@ -31,7 +31,7 @@ import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloader;
 import com.orhanobut.logger.Logger;
-import com.tencent.tauth.Tencent;
+import com.umeng.qq.tencent.Tencent;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.UMShareListener;
@@ -115,8 +115,6 @@ public class MyFragment extends BaseFragment implements VersionUpdateDialog.Upda
     private ProgressDialog progressDialog = null;
 
     private UMShareAPI mShareAPI = null;
-
-    private Tencent mTencent;
 
     private String downUrl;
 

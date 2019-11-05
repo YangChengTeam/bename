@@ -7,5 +7,5 @@ import com.ydys.qmb.base.IBaseRequestCallBack;
  */
 
 public interface AgentInfoModel<T> {
-    void addAgent(String imei, String agentId, IBaseRequestCallBack<T> iBaseRequestCallBack);
+    void addAgent(String imei, String agentId,String siteId, IBaseRequestCallBack<T> iBaseRequestCallBack);
 }

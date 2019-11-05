@@ -32,6 +32,7 @@ import com.orhanobut.logger.Logger;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+import com.umeng.analytics.MobclickAgent;
 import com.ydys.qmb.App;
 import com.ydys.qmb.R;
 import com.ydys.qmb.base.IBaseView;
@@ -65,6 +66,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -430,6 +432,11 @@ public class NameListActivity extends BaseActivity implements IBaseView, PayDial
     @OnClick(R.id.btn_pay)
     void payButton() {
         if (payDialog != null && !payDialog.isShowing()) {
+            Map<String, Object> clickMap = new HashMap<String, Object>();
+            clickMap.put("pay_click", "click_num");
+
+            MobclickAgent.onEventObject(this, "open_pay_dialog", clickMap);
+            //MobclickAgent.onEvent(this,"open_pay_dialog");
             payDialog.show();
             if (App.priceInfo != null) {
                 payDialog.setPayInfo(querySurName, querySex, queryBirthDate, App.priceInfo.getmPrice(), App.priceInfo.getPrice(), querySurName);
@@ -625,6 +632,14 @@ public class NameListActivity extends BaseActivity implements IBaseView, PayDial
             payRequestParams.setTitle("解锁[" + querySurName + "]姓所有高分吉祥美名");
             payInfoPresenterImp.createOrder(payRequestParams);
         }
+    }
+
+    @Override
+    public void payClose() {
+        Map<String, Object> clickMap = new HashMap<String, Object>();
+        clickMap.put("pay_close", "close_num");
+        MobclickAgent.onEventObject(this, "close_pay_dialog", clickMap);
+        //MobclickAgent.onEvent(this,"close_pay_dialog");
     }
 
     @Override

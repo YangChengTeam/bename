@@ -222,7 +222,7 @@ public class LoginActivity extends BaseActivity implements UserInfoView {
         loginType = 1;
         LoginParams loginParams = new LoginParams();
         loginParams.setType(loginType);
-        loginParams.setAgent(App.agentId);
+        loginParams.setAgent(SPUtils.getInstance().getString(Constants.AGENT_ID,App.agentId));
         loginParams.setImei(PhoneUtils.getIMEI());
         loginParams.setPhone(mPhoneNumberEt.getText().toString());
         loginParams.setVersion(AppUtils.getAppVersionName());

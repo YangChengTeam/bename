@@ -7,5 +7,5 @@ import com.ydys.qmb.bean.QueryNameInfo;
  */
 
 public interface AgentInfoPresenter {
-    void addAgent(String imei, String agentId);
+    void addAgent(String imei, String agentId,String siteId);
 }

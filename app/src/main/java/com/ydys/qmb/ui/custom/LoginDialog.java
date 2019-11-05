@@ -154,24 +154,30 @@ public class LoginDialog extends Dialog implements View.OnClickListener, UserInf
         public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
             Logger.i("auth data --->" + JSONObject.toJSONString(data));
             //Toast.makeText(mContext, "授权成功了", Toast.LENGTH_LONG).show();
-            App.isLogin = true;
-            if (data != null) {
-                if (progressDialog != null && !progressDialog.isShowing()) {
-                    progressDialog.show();
+            try {
+                App.isLogin = true;
+                if (data != null) {
+                    if (progressDialog != null && !progressDialog.isShowing()) {
+                        progressDialog.show();
+                    }
+                    try {
+                        LoginParams loginParams = new LoginParams();
+                        loginParams.setType(loginType);
+                        loginParams.setAgent(SPUtils.getInstance().getInt(Constants.AGENT_ID, Integer.parseInt(App.agentId)) + "");
+                        loginParams.setImei(PhoneUtils.getIMEI());
+                        loginParams.setVersion(AppUtils.getAppVersionName());
+                        loginParams.setFace(data.get("iconurl"));
+                        loginParams.setNickname(data.get("name"));
+                        loginParams.setOpenid(data.get("uid"));
+                        loginParams.setSiteId(App.siteId);
+
+                        userInfoPresenterImp.login(loginParams);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
-                try {
-                    LoginParams loginParams = new LoginParams();
-                    loginParams.setType(loginType);
-                    loginParams.setAgent(App.agentId);
-                    loginParams.setImei(PhoneUtils.getIMEI());
-                    loginParams.setVersion(AppUtils.getAppVersionName());
-                    loginParams.setFace(data.get("iconurl"));
-                    loginParams.setNickname(data.get("name"));
-                    loginParams.setOpenid(data.get("uid"));
-                    userInfoPresenterImp.login(loginParams);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
 

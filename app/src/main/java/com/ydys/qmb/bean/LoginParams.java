@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginParams {
     private int type;//登录类型(1:手机 2:微信 3：QQ) 必填
+    private String siteId;//来源站点ID(包信息有site_id时使用此参数)
     private String agent;//来源渠道 必填
     private String version;//版本
     private String imei;//手机串号 必填
@@ -28,6 +29,14 @@ public class LoginParams {
 
     public void setAgent(String agent) {
         this.agent = agent;
+    }
+
+    public String getSiteId() {
+        return siteId;
+    }
+
+    public void setSiteId(String siteId) {
+        this.siteId = siteId;
     }
 
     public String getVersion() {

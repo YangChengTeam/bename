@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
+import com.blankj.utilcode.util.StringUtils;
 import com.ydys.qmb.api.ChongMingInfoService;
 import com.ydys.qmb.api.VersionInfoService;
 import com.ydys.qmb.base.BaseModel;
@@ -36,11 +37,12 @@ public class AgentInfoModelImp extends BaseModel implements AgentInfoModel<Agent
     }
 
     @Override
-    public void addAgent(String imei, String agentId, IBaseRequestCallBack<AgentInfoRet> iBaseRequestCallBack) {
+    public void addAgent(String imei, String agentId, String siteId, IBaseRequestCallBack<AgentInfoRet> iBaseRequestCallBack) {
         JSONObject params = new JSONObject();
         try {
             params.put("imei", imei);
             params.put("agent", agentId);
+            params.put("site_id", StringUtils.isEmpty(siteId) ? agentId : siteId);
         } catch (JSONException e) {
             e.printStackTrace();
         }

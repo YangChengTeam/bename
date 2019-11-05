@@ -24,7 +24,7 @@ public class AgentInfoPresenterImp extends BasePresenterImp<IBaseView, AgentInfo
     }
 
     @Override
-    public void addAgent(String imei, String agentId) {
-        agentInfoModelImp.addAgent(imei, agentId, this);
+    public void addAgent(String imei, String agentId, String siteId) {
+        agentInfoModelImp.addAgent(imei, agentId, siteId, this);
     }
 }

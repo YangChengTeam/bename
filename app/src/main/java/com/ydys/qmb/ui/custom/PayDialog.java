@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.AppUtils;
+import com.umeng.analytics.MobclickAgent;
 import com.ydys.qmb.R;
 
 
@@ -48,6 +50,8 @@ public class PayDialog extends Dialog implements View.OnClickListener {
         void wxpay();
 
         void alipay();
+
+        void payClose();
     }
 
     public PayDialog(Context context) {
@@ -74,6 +78,7 @@ public class PayDialog extends Dialog implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pay_dialog_view);
         setCanceledOnTouchOutside(false);
+
         initView();
     }
 
@@ -102,6 +107,7 @@ public class PayDialog extends Dialog implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.iv_close:
+                payWayListener.payClose();
                 dismiss();
                 break;
             case R.id.layout_wx_pay:

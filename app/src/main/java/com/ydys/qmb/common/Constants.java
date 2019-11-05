@@ -28,4 +28,6 @@ public class Constants {
 
     public static final String USER_INFO = "login_user_info";
 
+    public static final String AGENT_ID = "agent_id";
+
 }

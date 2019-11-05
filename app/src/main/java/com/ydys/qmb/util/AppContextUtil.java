@@ -65,6 +65,40 @@ public class AppContextUtil {
         return result1;
     }
 
+    public static String getSiteInfo(Context context) {
+        String result1 = null;
+        ApplicationInfo appinfo = context.getApplicationInfo();
+        String sourceDir = appinfo.sourceDir;
+        ZipFile zf = null;
+        try {
+            zf = new ZipFile(sourceDir);
+            ZipEntry ze1 = zf.getEntry("META-INF/channelconfig.json");
+            InputStream in1 = zf.getInputStream(ze1);
+            result1 = readString(in1);
+            Logger.i("get site info--->" + result1);
+        } catch (Exception e) {
+            if (zf != null) {
+                try {
+                    zf.close();
+                } catch (Exception e2) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            Logger.i("文件不存在");
+        } finally {
+            if (zf != null) {
+                try {
+                    zf.close();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result1;
+    }
+
     public static String readString(InputStream in) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(in));
         String line;

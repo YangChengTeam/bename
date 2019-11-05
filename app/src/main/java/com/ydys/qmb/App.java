@@ -9,6 +9,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.orhanobut.logger.Logger;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.socialize.PlatformConfig;
 import com.ydys.qmb.bean.PriceInfo;
@@ -32,6 +33,8 @@ public class App extends Application {
     public static boolean isLogin;
 
     public static String agentId = "1";
+
+    public static String siteId = "";
 
     public static PriceInfo priceInfo;//商品价格信息
 
@@ -73,9 +76,23 @@ public class App extends Application {
 
         Logger.i("res channel--->" + App.agentId);
 
+        //获取渠道信息
+        String siteInfo = AppContextUtil.getSiteInfo(this);
+        try {
+            if (!StringUtils.isEmpty(siteInfo)) {
+                JSONObject jsonObject = JSON.parseObject(siteInfo);
+                App.siteId = jsonObject.getString("site_id");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         UMConfigure.init(this,"5d858ba63fc195f8e6000416",App.agentId,UMConfigure.DEVICE_TYPE_PHONE, "");
 
-        PlatformConfig.setQQZone("1109823591", "zqjqZImm84t0eBae");
+        // 选用LEGACY_AUTO页面采集模式
+        MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO);
+
+        PlatformConfig.setQQZone("1109891315", "C1DHLZgL4oVaTZSd");
         PlatformConfig.setWeixin("wx096649d1b91ee026", "ee1b30b2796f3446a0c33aed76206fa0");
 
         loadUserInfo();

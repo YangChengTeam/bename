@@ -28,7 +28,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         setStatusBar();
         context = this;
         ButterKnife.bind(this);
-        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
         initVars();
         initViews();
         initData(savedInstanceState);
@@ -42,7 +41,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
+        //MobclickAgent.onResume(this);
         if (presenter == null && getPresenter() != null) {
             presenter = getPresenter();
         }
@@ -51,7 +50,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
+        //MobclickAgent.onPause(this);
     }
 
     @Override

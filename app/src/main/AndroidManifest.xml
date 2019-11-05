@@ -60,8 +60,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MainActivity" />
-        <activity android:name=".ui.activity.NameListActivity" />
+        <activity android:name=".ui.activity.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.NameListActivity" android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.NameDetailActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
         <activity android:name=".ui.activity.Login1Activity" />
@@ -93,7 +93,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="tencent1109823591" />
+                <data android:scheme="tencent1109891315" />
             </intent-filter>
         </activity>
 
@@ -101,10 +101,6 @@
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <activity
-            android:name="com.tencent.connect.avatar.ImageActivity"
-            android:screenOrientation="portrait" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

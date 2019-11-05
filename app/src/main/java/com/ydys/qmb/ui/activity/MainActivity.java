@@ -171,7 +171,7 @@ public class MainActivity extends BaseActivity implements IBaseView, VersionUpda
         //将手机串号_渠道ID作为标识用户是否上报过数据
         String agentKey = PhoneUtils.getIMEI() + "_" + App.agentId;
         if (!SPUtils.getInstance().getBoolean(agentKey, false)) {
-            agentInfoPresenterImp.addAgent(PhoneUtils.getIMEI(), App.agentId);
+            agentInfoPresenterImp.addAgent(PhoneUtils.getIMEI(), App.agentId, App.siteId);
         }
         MainActivityPermissionsDispatcher.showStorageWithPermissionCheck(this);
     }
@@ -329,10 +329,12 @@ public class MainActivity extends BaseActivity implements IBaseView, VersionUpda
             }
 
             if (tData instanceof AgentInfoRet) {
-                Logger.i("数据已上报完成--->");
+                Logger.i("数据已上报完成--->" + JSON.toJSONString(tData));
                 if (tData != null && ((AgentInfoRet) tData).getCode() == Constants.SUCCESS) {
                     SPUtils.getInstance().put(PhoneUtils.getIMEI() + "_" + App.agentId, true);
+                    SPUtils.getInstance().put(Constants.AGENT_ID, ((AgentInfoRet) tData).getData().getAgent());
                 }
+                Logger.i("read agentid --->" + SPUtils.getInstance().getInt(Constants.AGENT_ID));
             }
         }
     }
